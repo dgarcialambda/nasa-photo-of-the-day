@@ -1,24 +1,49 @@
 import React from "react";
 import NasaList from "./components/NasaList"
+import logo from "./assets/logo.png"
 import "./App.css";
+import { Button, Navbar, NavbarBrand, NavItem, Nav, NavLink} from 'reactstrap'
+
 
 function App() {
   return (
     <div className="App">
-      <div className="nav-bar">
-        <h1>Nasa</h1>
-        <nav>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Articles</a>
-          <a href="">Sign In</a>
-          <input type="text" placeholder="Search.."></input>
-          <button>Register</button>
-        </nav>
+      <div className="logo-container">
+        <img className="logo" src={logo} alt="Nasa Logo"/>
       </div>
+      <div>
+        <Navbar light expand="lg">
+          <NavbarBrand href="Home">Home</NavbarBrand>
+          <Nav className="nav-bar" navbar>
+            <NavItem>
+              <NavLink href="About">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="Articles">Articles</NavLink>
+            </NavItem>
+            <NavItem>
+             
+            </NavItem>
+            <Button size="sm" color="danger">Register</Button>
+          </Nav>
+        </Navbar>
+     
+        </div>
       <NasaList />
     </div>
   );
 }
+
+function nasaNav() {
+  return (
+    <div 
+      style= {{
+        
+      }}
+      ></div>
+  )
+}
+
+
 
 export default App;
