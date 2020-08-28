@@ -20,39 +20,86 @@ function App() {
       });
   }, []);
   return (
-    <div className="App">
-      <div className="logo-container">
-        <img className="logo" src={logo} alt="Nasa Logo"/>
-      </div>
+    <Apps className="App">
+      <Logo className="logo-container">
+        <Image className="logo" src={logo} alt="Nasa Logo"/>
+      </Logo>
       <Container>
           <nav>
-            <a href="Home">Home</a>
-            <a href="About">About</a>
-            <a href="Articles">Articles</a>
-            <input type="text" placeholder="Search.."></input>
-            <a href="Sign">Sign In</a>
+            <Anchors href="Home">Home</Anchors>
+            <Anchors href="About">About</Anchors>
+            <Anchors href="Articles">Articles</Anchors>
+            <Input type="text" placeholder="Search.."></Input>
+            <Anchors href="Sign">Sign In</Anchors>
             <Button>Register</Button>
         </nav>
-      </Container>
-      <div className="nasa-api">
         <NasaCard nasa={nasa}/>
-      </div>
-    </div>
+      </Container>
+      
+    </Apps>
   );
 }
 const Button = styled.button`
-background-color: #FFD1DC;
+background-color: #f2c6de;
 border-radius: 3px;
-color: #5DB29E;
+color: #5e6472;
 font-weight: bold;
 margin: 2em 1em;
 padding 0.25em 1em;
+text-align: center;
+font-size: 1.4rem;
 `;
 const Container = styled.div`
-  text-align: center;
+background-color: #ffc6ff;
+color: #5e6472; 
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
 
 `;
+const Apps = styled.div`
+background-color: black; 
+  
+
+`;
+const Anchors = styled.a`
+text-decoration: none;
+font-size: 1.5rem;
+color: #5e6472;
+padding: 50px;
+
+
+
+`;
+const Input = styled.input`
+text-decoration: none;
+font-size: 1.0rem;
+color: #5e6472;
+padding: 8px;
+width: 325px;
+
+
+`;
+const Image = styled.img`
+width: 175px;
+height: 150px;
+padding: 5px;
+margin-right: 75%;
+
+
+
+`;
+const Logo = styled.div`
+background-image: url("https://wallpaperstream.com/wallpapers/full/milky-way/Purple-Pink-Night-Sky-Wallpaper.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+`;
+
+
+
 
 
 export default App;
